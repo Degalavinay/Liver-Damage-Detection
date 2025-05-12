@@ -14,8 +14,6 @@ The dataset consists of labeled liver images across three classes:
 - **Hepatocellular Carcinoma (HCC)**
 - **Cholangiocarcinoma (CC)**
 
-> *Due to medical data restrictions, the dataset is not included in this repository. Please contact the project author or use your own dataset.*
-
 
 # Results
 
