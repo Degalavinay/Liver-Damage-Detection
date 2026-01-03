@@ -1,32 +1,44 @@
-
 # Liver Damage Detection using Deep Learning
 
 This project aims to automatically detect liver damage from medical images using advanced deep learning techniques. It classifies liver conditions into three categories: **Normal Liver**, **Hepatocellular Carcinoma (HCC)**, and **Cholangiocarcinoma (CC)**.
 
-# Project Overview
+## Project Structure
 
-Liver cancer is one of the most common and deadly diseases worldwide. Early detection can drastically improve treatment outcomes. This model leverages convolutional neural networks (CNNs) for high-accuracy multi-class classification of liver conditions based on image data.
+The project is organized as follows:
 
-# Dataset
+- **`code/`**: Contains the source code.
+  - `app.py`: A Streamlit web application for real-time inference.
+  - `Code.ipynb`: Jupyter notebook used for training/analysis.
+- **`data/`**: dataset images categorized by class (`Normal`, `HCC`, `CC`).
+- **`model/`**: Contains the trained deep learning model (`VGG19_final_model.keras`).
+- **`requirements.txt`**: List of Python dependencies.
 
-The dataset consists of labeled liver images across three classes:
-- **Normal**
-- **Hepatocellular Carcinoma (HCC)**
-- **Cholangiocarcinoma (CC)**
+## Installation
 
+1.  **Clone or download** this repository.
+2.  **Install dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-# Results
+## Usage
 
-The model achieved strong performance with high accuracy, precision, and recall across all three classes. Visualizations and confusion matrices are provided in the `notebooks/` folder.
+### Running the Web App
 
+To launch the interactive web interface for liver damage detection:
 
+```bash
+streamlit run code/app.py
+```
 
-# Future Work
+This will open a browser window where you can upload liver images and get real-time predictions.
 
-- Model explainability with Grad-CAM or SHAP
-- Dataset expansion
-- Web interface for live predictions
+## Model Details
 
-# Acknowledgements
+- **Architecture**: VGG19 (Transfer Learning)
+- **Input**: Histopathology images (224x224)
+- **Classes**: Normal, CC, HCC
+
+## Acknowledgements
 
 This project was built for research and academic purposes as part of a study in medical image analysis.
